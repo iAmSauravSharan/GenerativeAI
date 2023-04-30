@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+}
+
+group = 'com.sauravsharan'
+version = '1.0'
+description = 'Generative AI'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+
+    implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.11.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.amazonaws:aws-java-sdk-kms:1.12.443'
+
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.2.0'
+    testImplementation 'junit:junit:4.13.1'
+}
